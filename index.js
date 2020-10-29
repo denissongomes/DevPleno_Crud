@@ -9,6 +9,10 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname,'views'))
 
+app.get('/', (req, res) => {
+    res.render('home')
+})
+
 app.listen(port, () => {
     console.log('CRUD listening on port: ' + port)
 })
