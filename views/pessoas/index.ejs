@@ -7,15 +7,24 @@
           <th scope="col">Nome</th>
           <th scope="col">Last</th>
           <th scope="col">Handle</th>
+          <th scope="col">Options</th>
         </tr>
       </thead>
     <tbody>   
     <% pessoas.map( pessoa => { %>
         <tr>
             <th scope="row"><%= pessoa.id %></th>
-         
             <td><%= pessoa.nome %></td>
-        </tr>
+            <td>Last</td>
+            <td>Handle</td>
+            <td class="mx-auto" style="width:250px;">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Left</button>
+                <button type="button" class="btn btn-secondary">Middle</button>
+                <button type="button" class="btn btn-secondary">Right</button>
+              </div>
+            </td>
+        </tr>  
         <% }) %> 
 </tbody>
 </table>
