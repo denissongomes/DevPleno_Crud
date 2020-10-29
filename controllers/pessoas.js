@@ -4,6 +4,6 @@ const index = (connection, req, res) => {
     })  
 }
 
-module.export = {
+module.exports = {
     index
 }
