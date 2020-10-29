@@ -11,7 +11,6 @@ const findAll = (connection) => {
     }) 
 }
 
-//deleta um registro
 const deleteRow = (connection, id) => {
     return new Promise ((resolve,reject) => {
         connection.query(`DELETE FROM pessoas WHERE id = '${id}' limit 1`, (err) => {

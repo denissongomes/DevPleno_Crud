@@ -6,9 +6,7 @@ const index = async(connection, req, res) => {
 }
 
 const deleteRow = async(connection, req, res) => {
-  //deleta registro
   await pessoas.deleteRow(connection, req.params.id)
- //e redireciona novamente para 'pessoas'
   res.redirect('/pessoas')
 }
 
