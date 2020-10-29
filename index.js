@@ -3,6 +3,12 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 3000
 const mysql = require('mysql')
+const connection = mysql.createConnection({
+    host: '127.0.0.1',
+    user: 'root',
+    password: '',
+    database: 'cadastro'
+})
 
 app.use(express.static('public'))
 
