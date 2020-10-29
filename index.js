@@ -10,6 +10,7 @@ const connection = mysql.createConnection({
     database: 'cadastro'
 })
 
+const pessoas = require('./routes/pessoas.js')
 
 app.use(express.static('public'))
 
