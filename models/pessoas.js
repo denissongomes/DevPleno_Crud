@@ -23,6 +23,20 @@ const deleteRow = (connection, id) => {
     })
 }
 
+const create = (connection, data) => {
+    return new Promise((resolv, reject) => {
+        connection.query(`INSERT INTO pessoas (nome, nascimento, cargo) values ('${data.nome}','${data.nascimento}','${data.cargo}')`, (err) => {
+            if(err){
+                reject(err)
+            }else{
+                resolve()
+            } 
+        })
+    })
+}
+
 module.exports = {
-    findAll, deleteRow
+    findAll, 
+    deleteRow,
+    create
 }
