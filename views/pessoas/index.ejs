@@ -3,7 +3,9 @@
     <tr>
     <th>Nome</th>
     </tr>
-    <tr>
-        <td>NOME</td>
-    </tr>
+    <% pessoas.map( pessoa => { %>
+        <tr>
+            <td><%= pessoa.nome %></td>
+        </tr>
+        <% }) %>
 </table>
