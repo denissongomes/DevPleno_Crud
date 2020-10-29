@@ -1,13 +1,22 @@
 <%- include ('../partials/header.ejs') -%>
 <h1>Pessoas</h1>
-<table>
-    <tr>
-    <th>Nome</th>
-    </tr>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+    <tbody>   
     <% pessoas.map( pessoa => { %>
         <tr>
+            <th scope="row"><%= pessoa.id %></th>
+         
             <td><%= pessoa.nome %></td>
         </tr>
-        <% }) %>
+        <% }) %> 
+</tbody>
 </table>
 <%- include ('../partials/footer.ejs') -%>
