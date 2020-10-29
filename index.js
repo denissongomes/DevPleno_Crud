@@ -10,6 +10,8 @@ const connection = mysql.createConnection({
     database: 'cadastro'
 })
 
+connection.connect(() => console.log('Connected to database'))
+
 app.use(express.static('public'))
 
 //view engine
