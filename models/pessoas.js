@@ -11,18 +11,19 @@ const findAll = (connection) => {
     }) 
 }
 
-const deleteOne = (connection, id) => {
-    return new Promise((resolve,reject) => {
-        connection.query(`DELETE FROM pessoas WHERE id = '${id}' limit 1`), (err, results) => {
+//deleta um registro
+const deleteRow = (connection, id) => {
+    return new Promise ((resolve,reject) => {
+        connection.query(`DELETE FROM pessoas WHERE id = '${id}' limit 1`, (err) => {
             if(err){
                 reject(err)
-            } else {
-                resolve(results)
+            }else{
+                resolve()
             }
-        }
+        })
     })
 }
 
 module.exports = {
-    findAll, deleteOne
+    findAll, deleteRow
 }
