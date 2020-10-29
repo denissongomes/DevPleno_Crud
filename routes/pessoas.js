@@ -1,4 +1,5 @@
 const express = require('express')
+const pessoasController =  require('../controllers/pessoas.js')
 
 const pessoasRouter = ({connection}) => {
     const router = express.Router()
