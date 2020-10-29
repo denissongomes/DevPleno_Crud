@@ -11,9 +11,9 @@ const findAll = (connection) => {
     }) 
 }
 
-const deleteOne = (connection) => {
+const deleteOne = (connection, id) => {
     return new Promise((resolve,reject) => {
-        connection.query('DELETE FROM pessoas WHERE id='+id), (err, results) => {
+        connection.query('DELETE FROM pessoas WHERE id='+id+' limit 1'), (err, results) => {
             if(err){
                 reject(err)
             } else {
