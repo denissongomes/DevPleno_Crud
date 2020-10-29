@@ -10,8 +10,12 @@ const deleteRow = async(connection, req, res) => {
   res.redirect('/pessoas')
 }
 
+const createForm = (req, res) => {
+  res.render('/pessoas/create')
+}
 
 module.exports = {
     index,
-    deleteRow
+    deleteRow, 
+    createForm
 }
