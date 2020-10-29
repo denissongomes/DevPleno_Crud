@@ -1,5 +1,12 @@
 const findAll = (connection) => {
-    connection.query('select * from pessoas', (err, results) => {
-        res.send(results)
-    })  
+    return new Promise((resolve, reject) => {
+        connection.query('select * from pessoas', (err, results) => {
+            if(err){
+                reject(err)
+            } else {
+                resolve(results)
+            }
+            
+        }) 
+    }) 
 }
