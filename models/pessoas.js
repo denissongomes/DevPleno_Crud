@@ -10,3 +10,7 @@ const findAll = (connection) => {
         }) 
     }) 
 }
+
+module.exports = {
+    findAll
+}
