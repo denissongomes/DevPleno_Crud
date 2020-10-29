@@ -1,6 +1,6 @@
 const findAll = (connection) => {
     return new Promise((resolve, reject) => {
-        connection.query('select * from pessoas', (err, results) => {
+        connection.query('SELECT * FROM pessoas', (err, results) => {
             if(err){
                 reject(err)
             } else {
@@ -11,6 +11,18 @@ const findAll = (connection) => {
     }) 
 }
 
+const deleteOne = (connection) => {
+    return new Promise((resolve,reject) => {
+        connection.query('DELETE FROM pessoas WHERE id='+id), (err, results) => {
+            if(err){
+                reject(err)
+            } else {
+                resolve(results)
+            }
+        }
+    })
+}
+
 module.exports = {
-    findAll
+    findAll, deleteOne
 }
