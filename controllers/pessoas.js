@@ -11,7 +11,7 @@ const deleteRow = async(connection, req, res) => {
 }
 
 const createForm = (req, res) => {
-  res.render('/pessoas/create')
+  res.render('pessoas/create')
 }
 
 module.exports = {
