@@ -24,7 +24,7 @@ const deleteRow = (connection, id) => {
 }
 
 const create = (connection, data) => {
-    return new Promise((resolv, reject) => {
+    return new Promise((resolve, reject) => {
         connection.query(`INSERT INTO pessoas (nome, nascimento, cargo) values ('${data.nome}','${data.nascimento}','${data.cargo}')`, (err) => {
             if(err){
                 reject(err)
