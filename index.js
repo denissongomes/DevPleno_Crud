@@ -10,7 +10,6 @@ const connection = mysql.createConnection({
     database: 'cadastro'
 })
 
-connection.connect(() => console.log('Connected to database'))
 
 app.use(express.static('public'))
 
@@ -22,6 +21,8 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
-app.listen(port, () => {
-    console.log('CRUD listening on port: ' + port)
+connection.connect(() =>  {
+    app.listen(port, () => {
+        console.log('CRUD listening on port: ' + port)
+    })
 })
