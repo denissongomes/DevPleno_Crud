@@ -1,6 +1,6 @@
 const express = require('express')
 
-const pessoasRouter = () => {
+const pessoasRouter = (dependencies) => {
     const router = express.Router()
     router.get('/', (req, res) => {
         res.send('Pessoas')
