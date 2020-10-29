@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
-app.use('/pessoas', pessoas)
+app.use('/pessoas', pessoas(dependencies))
 
 connection.connect(() =>  {
     app.listen(port, () => {
