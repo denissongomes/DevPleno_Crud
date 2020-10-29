@@ -22,6 +22,8 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.use('/pessoas', pessoas)
+
 connection.connect(() =>  {
     app.listen(port, () => {
         console.log('CRUD listening on port: ' + port)
