@@ -3,7 +3,7 @@ const pessoasController =  require('../controllers/pessoas.js')
 
 const pessoasRouter = ({connection}) => {
     const router = express.Router()
-    router.get('/', )
+    router.get('/', pessoasController.index)
     return router
 }
 
